@@ -6,8 +6,26 @@
 
 ## 🎓 J'ai compris et je peux expliquer
 
-- l'état (_state_) pour contrôler l'affichage d'un composant ❌ / ✔️
-- les composants enfants et les _props_ qu'on leur passe ❌ / ✔️
+### - l'état (_state_) pour contrôler l'affichage d'un composant ✔️
+
+``` javascript
+import { useState } from 'react';
+
+const [someState, setSomeState] = useState(initialValueOfState)
+```
+
+***
+
+### - les composants enfants et les _props_ qu'on leur passe ✔️
+
+``` javascript
+<Component prop={someState.value}>
+```
+Les composants sont des morceaux de code que l'on va retrouver à plusieurs reprises dans le code. On les définit à un endroit (souvent dans un dossier */components*) pour pouvoir les appeller où on en a besoin, autant de fois que nécessaire (par exemple : une carte utilisateur, une navBar etc)
+On peut leur passer en 'props' des informations dynamiques correspondant au composant (par exemple : `prop={user.name}` )
+
+***
+
 - le déclenchement d'instructions en fonction des actions de l'utilisateur ❌ / ✔️
 - le déclenchement d'instructions en fonction de l'étape du cycle de vie du composant ou du changement de valeur de ses props ❌ / ✔️
 - l'usage d'un reducer (_useReducer_) pour gérer un état composé dans un composant
